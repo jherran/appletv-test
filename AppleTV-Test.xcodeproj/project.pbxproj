@@ -10,6 +10,7 @@
 		18046BB52265BE0B00187BB6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18046BB42265BE0B00187BB6 /* Media.swift */; };
 		18046BB72265C73500187BB6 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18046BB62265C73500187BB6 /* ResponseObject.swift */; };
 		18046BB92265EFAD00187BB6 /* RowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18046BB82265EFAD00187BB6 /* RowTableViewCell.swift */; };
+		18050A64226E18770071B552 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18050A63226E18770071B552 /* Keys.plist */; };
 		186A61D4225F4E9B002A781F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D3225F4E9B002A781F /* CustomCollectionViewCell.swift */; };
 		186A61D6225F7DE0002A781F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D5225F7DE0002A781F /* ThirdViewController.swift */; };
 		18BD9ABD226606E70078843C /* RowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD9ABC226606E70078843C /* RowTableViewCell.xib */; };
@@ -43,6 +44,7 @@
 		18046BB42265BE0B00187BB6 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		18046BB62265C73500187BB6 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		18046BB82265EFAD00187BB6 /* RowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTableViewCell.swift; sourceTree = "<group>"; };
+		18050A63226E18770071B552 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		186A61D3225F4E9B002A781F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		186A61D5225F7DE0002A781F /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		18BD9ABC226606E70078843C /* RowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowTableViewCell.xib; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				18BF62C9225E43DB0009865B /* Main.storyboard */,
 				18BF62CC225E43DD0009865B /* Assets.xcassets */,
 				18BF62CE225E43DD0009865B /* Info.plist */,
+				18050A63226E18770071B552 /* Keys.plist */,
 			);
 			path = "AppleTV-Test";
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				18BF62CD225E43DD0009865B /* Assets.xcassets in Resources */,
 				18BF62CB225E43DB0009865B /* Main.storyboard in Resources */,
 				18C992C222609E4900845BAF /* CustomCollectionViewCell.xib in Resources */,
+				18050A64226E18770071B552 /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
