@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18046BB52265BE0B00187BB6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18046BB42265BE0B00187BB6 /* Media.swift */; };
+		18046BB72265C73500187BB6 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18046BB62265C73500187BB6 /* ResponseObject.swift */; };
+		18046BB92265EFAD00187BB6 /* RowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18046BB82265EFAD00187BB6 /* RowTableViewCell.swift */; };
+		186A61D4225F4E9B002A781F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D3225F4E9B002A781F /* CustomCollectionViewCell.swift */; };
+		186A61D6225F7DE0002A781F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D5225F7DE0002A781F /* ThirdViewController.swift */; };
+		18BD9ABD226606E70078843C /* RowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD9ABC226606E70078843C /* RowTableViewCell.xib */; };
+		18BF62C4225E43DB0009865B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF62C3225E43DB0009865B /* AppDelegate.swift */; };
+		18BF62C6225E43DB0009865B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF62C5225E43DB0009865B /* FirstViewController.swift */; };
+		18BF62C8225E43DB0009865B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF62C7225E43DB0009865B /* SecondViewController.swift */; };
+		18BF62CB225E43DB0009865B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF62C9225E43DB0009865B /* Main.storyboard */; };
+		18BF62CD225E43DD0009865B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BF62CC225E43DD0009865B /* Assets.xcassets */; };
+		18C992C222609E4900845BAF /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C992C122609E4900845BAF /* CustomCollectionViewCell.xib */; };
+		D9E2447DECE77FF38AC1CDD6 /* Pods_AppleTV_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0429105E235F305837B29EC /* Pods_AppleTV_Test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18BF62D4225E43DD0009865B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BF62B8225E43DB0009865B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BF62BF225E43DB0009865B;
+			remoteInfo = Test;
+		};
+		18BF62DF225E43DD0009865B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BF62B8225E43DB0009865B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BF62BF225E43DB0009865B;
+			remoteInfo = Test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18046BB42265BE0B00187BB6 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		18046BB62265C73500187BB6 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
+		18046BB82265EFAD00187BB6 /* RowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTableViewCell.swift; sourceTree = "<group>"; };
+		186A61D3225F4E9B002A781F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		186A61D5225F7DE0002A781F /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		18BD9ABC226606E70078843C /* RowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowTableViewCell.xib; sourceTree = "<group>"; };
+		18BF62C0225E43DB0009865B /* AppleTV-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppleTV-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BF62C3225E43DB0009865B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18BF62C5225E43DB0009865B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		18BF62C7225E43DB0009865B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		18BF62CA225E43DB0009865B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18BF62CC225E43DD0009865B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18BF62CE225E43DD0009865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BF62D3225E43DD0009865B /* AppleTV-TestAppleTV-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppleTV-TestAppleTV-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BF62DE225E43DD0009865B /* AppleTV-TestUIAppleTV-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppleTV-TestUIAppleTV-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C992C122609E4900845BAF /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		4CD01C245D871F546BA2BBEA /* Pods-AppleTV-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTV-Test.release.xcconfig"; path = "Target Support Files/Pods-AppleTV-Test/Pods-AppleTV-Test.release.xcconfig"; sourceTree = "<group>"; };
+		D2DFCA003F142D8C3515B6AA /* Pods-AppleTV-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTV-Test.debug.xcconfig"; path = "Target Support Files/Pods-AppleTV-Test/Pods-AppleTV-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		F0429105E235F305837B29EC /* Pods_AppleTV_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleTV_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18BF62BD225E43DB0009865B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E2447DECE77FF38AC1CDD6 /* Pods_AppleTV_Test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BF62D0225E43DD0009865B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BF62DB225E43DD0009865B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18BF62B7225E43DB0009865B = {
+			isa = PBXGroup;
+			children = (
+				18BF62C2225E43DB0009865B /* AppleTV-Test */,
+				18BF62C1225E43DB0009865B /* Products */,
+				1DB27CC4B57D85A2112A1A9D /* Pods */,
+				1EC9C3AC0092DDBCA0AEDB89 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18BF62C1225E43DB0009865B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18BF62C0225E43DB0009865B /* AppleTV-Test.app */,
+				18BF62D3225E43DD0009865B /* AppleTV-TestAppleTV-Tests.xctest */,
+				18BF62DE225E43DD0009865B /* AppleTV-TestUIAppleTV-Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18BF62C2225E43DB0009865B /* AppleTV-Test */ = {
+			isa = PBXGroup;
+			children = (
+				18BF62C3225E43DB0009865B /* AppDelegate.swift */,
+				18046BB62265C73500187BB6 /* ResponseObject.swift */,
+				18046BB42265BE0B00187BB6 /* Media.swift */,
+				18BF62C5225E43DB0009865B /* FirstViewController.swift */,
+				18BF62C7225E43DB0009865B /* SecondViewController.swift */,
+				186A61D5225F7DE0002A781F /* ThirdViewController.swift */,
+				18046BB82265EFAD00187BB6 /* RowTableViewCell.swift */,
+				18BD9ABC226606E70078843C /* RowTableViewCell.xib */,
+				186A61D3225F4E9B002A781F /* CustomCollectionViewCell.swift */,
+				18C992C122609E4900845BAF /* CustomCollectionViewCell.xib */,
+				18BF62C9225E43DB0009865B /* Main.storyboard */,
+				18BF62CC225E43DD0009865B /* Assets.xcassets */,
+				18BF62CE225E43DD0009865B /* Info.plist */,
+			);
+			path = "AppleTV-Test";
+			sourceTree = "<group>";
+		};
+		1DB27CC4B57D85A2112A1A9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2DFCA003F142D8C3515B6AA /* Pods-AppleTV-Test.debug.xcconfig */,
+				4CD01C245D871F546BA2BBEA /* Pods-AppleTV-Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1EC9C3AC0092DDBCA0AEDB89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0429105E235F305837B29EC /* Pods_AppleTV_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18BF62BF225E43DB0009865B /* AppleTV-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BF62E7225E43DD0009865B /* Build configuration list for PBXNativeTarget "AppleTV-Test" */;
+			buildPhases = (
+				932C3E28FAF3D95C332B1D48 /* [CP] Check Pods Manifest.lock */,
+				18BF62BC225E43DB0009865B /* Sources */,
+				18BF62BD225E43DB0009865B /* Frameworks */,
+				18BF62BE225E43DB0009865B /* Resources */,
+				58378667EEF378FBE04C48E2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppleTV-Test";
+			productName = Test;
+			productReference = 18BF62C0225E43DB0009865B /* AppleTV-Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18BF62D2225E43DD0009865B /* AppleTV-TestAppleTV-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BF62EA225E43DD0009865B /* Build configuration list for PBXNativeTarget "AppleTV-TestAppleTV-Tests" */;
+			buildPhases = (
+				18BF62CF225E43DD0009865B /* Sources */,
+				18BF62D0225E43DD0009865B /* Frameworks */,
+				18BF62D1225E43DD0009865B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BF62D5225E43DD0009865B /* PBXTargetDependency */,
+			);
+			name = "AppleTV-TestAppleTV-Tests";
+			productName = TestTests;
+			productReference = 18BF62D3225E43DD0009865B /* AppleTV-TestAppleTV-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18BF62DD225E43DD0009865B /* AppleTV-TestUIAppleTV-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BF62ED225E43DD0009865B /* Build configuration list for PBXNativeTarget "AppleTV-TestUIAppleTV-Tests" */;
+			buildPhases = (
+				18BF62DA225E43DD0009865B /* Sources */,
+				18BF62DB225E43DD0009865B /* Frameworks */,
+				18BF62DC225E43DD0009865B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BF62E0225E43DD0009865B /* PBXTargetDependency */,
+			);
+			name = "AppleTV-TestUIAppleTV-Tests";
+			productName = TestUITests;
+			productReference = 18BF62DE225E43DD0009865B /* AppleTV-TestUIAppleTV-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18BF62B8225E43DB0009865B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Jose Angel Herran";
+				TargetAttributes = {
+					18BF62BF225E43DB0009865B = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					18BF62D2225E43DD0009865B = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 18BF62BF225E43DB0009865B;
+					};
+					18BF62DD225E43DD0009865B = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 18BF62BF225E43DB0009865B;
+					};
+				};
+			};
+			buildConfigurationList = 18BF62BB225E43DB0009865B /* Build configuration list for PBXProject "AppleTV-Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18BF62B7225E43DB0009865B;
+			productRefGroup = 18BF62C1225E43DB0009865B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18BF62BF225E43DB0009865B /* AppleTV-Test */,
+				18BF62D2225E43DD0009865B /* AppleTV-TestAppleTV-Tests */,
+				18BF62DD225E43DD0009865B /* AppleTV-TestUIAppleTV-Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18BF62BE225E43DB0009865B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BD9ABD226606E70078843C /* RowTableViewCell.xib in Resources */,
+				18BF62CD225E43DD0009865B /* Assets.xcassets in Resources */,
+				18BF62CB225E43DB0009865B /* Main.storyboard in Resources */,
+				18C992C222609E4900845BAF /* CustomCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BF62D1225E43DD0009865B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BF62DC225E43DD0009865B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58378667EEF378FBE04C48E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppleTV-Test/Pods-AppleTV-Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppleTV-Test/Pods-AppleTV-Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		932C3E28FAF3D95C332B1D48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppleTV-Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18BF62BC225E43DB0009865B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BF62C8225E43DB0009865B /* SecondViewController.swift in Sources */,
+				18BF62C4225E43DB0009865B /* AppDelegate.swift in Sources */,
+				18046BB52265BE0B00187BB6 /* Media.swift in Sources */,
+				18046BB72265C73500187BB6 /* ResponseObject.swift in Sources */,
+				186A61D6225F7DE0002A781F /* ThirdViewController.swift in Sources */,
+				18046BB92265EFAD00187BB6 /* RowTableViewCell.swift in Sources */,
+				18BF62C6225E43DB0009865B /* FirstViewController.swift in Sources */,
+				186A61D4225F4E9B002A781F /* CustomCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BF62CF225E43DD0009865B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BF62DA225E43DD0009865B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18BF62D5225E43DD0009865B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BF62BF225E43DB0009865B /* AppleTV-Test */;
+			targetProxy = 18BF62D4225E43DD0009865B /* PBXContainerItemProxy */;
+		};
+		18BF62E0225E43DD0009865B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BF62BF225E43DB0009865B /* AppleTV-Test */;
+			targetProxy = 18BF62DF225E43DD0009865B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18BF62C9225E43DB0009865B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BF62CA225E43DB0009865B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18BF62E5225E43DD0009865B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 12.2;
+			};
+			name = Debug;
+		};
+		18BF62E6225E43DD0009865B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 12.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18BF62E8225E43DD0009865B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2DFCA003F142D8C3515B6AA /* Pods-AppleTV-Test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MXWY272D5U;
+				INFOPLIST_FILE = "$(SRCROOT)/AppleTV-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jherran.AppleTV-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		18BF62E9225E43DD0009865B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD01C245D871F546BA2BBEA /* Pods-AppleTV-Test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MXWY272D5U;
+				INFOPLIST_FILE = "$(SRCROOT)/AppleTV-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jherran.AppleTV-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		18BF62EB225E43DD0009865B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jherran.TestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleTV-Test.app/AppleTV-Test";
+			};
+			name = Debug;
+		};
+		18BF62EC225E43DD0009865B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jherran.TestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleTV-Test.app/AppleTV-Test";
+			};
+			name = Release;
+		};
+		18BF62EE225E43DD0009865B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jherran.TestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = Test;
+			};
+			name = Debug;
+		};
+		18BF62EF225E43DD0009865B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jherran.TestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = Test;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18BF62BB225E43DB0009865B /* Build configuration list for PBXProject "AppleTV-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BF62E5225E43DD0009865B /* Debug */,
+				18BF62E6225E43DD0009865B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BF62E7225E43DD0009865B /* Build configuration list for PBXNativeTarget "AppleTV-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BF62E8225E43DD0009865B /* Debug */,
+				18BF62E9225E43DD0009865B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BF62EA225E43DD0009865B /* Build configuration list for PBXNativeTarget "AppleTV-TestAppleTV-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BF62EB225E43DD0009865B /* Debug */,
+				18BF62EC225E43DD0009865B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BF62ED225E43DD0009865B /* Build configuration list for PBXNativeTarget "AppleTV-TestUIAppleTV-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BF62EE225E43DD0009865B /* Debug */,
+				18BF62EF225E43DD0009865B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18BF62B8225E43DB0009865B /* Project object */;
+}
