@@ -23,11 +23,11 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if let movie = mediaItem {
-            poster.kf.setImage(with: movie.posterURL)
-            filmTitle.text = movie.title ?? movie.name
-            originalTitle.text = "\(movie.originalTitle ?? movie.originalName ?? "") - \(movie.originalLanguage ?? "") - \(movie.releaseDate?.toString() ?? movie.firstAirDate?.toString() ?? "")"
-            overview.text = movie.overview
+        if let item = mediaItem {
+            poster.kf.setImage(with: item.posterURL)
+            filmTitle.text = item.title ?? item.name
+            originalTitle.text = "\(item.originalTitle ?? item.originalName ?? "") - \(item.originalLanguage ?? "") - \(item.releaseDate?.toString() ?? item.firstAirDate?.toString() ?? "")"
+            overview.text = item.overview
         }
     }
     

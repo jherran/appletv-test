@@ -46,7 +46,7 @@ class FirstViewController: UIViewController {
         tableView.dataSource = self
         tableView.remembersLastFocusedIndexPath = true
         
-        getConfigurationFilmsAndTV()
+        getConfigurationFilmsAndTVShows()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,7 +56,7 @@ class FirstViewController: UIViewController {
         }
     }
     
-    func getConfigurationFilmsAndTV() {
+    func getConfigurationFilmsAndTVShows() {
         let urlRequest = URLRequest(url: configurationURL)
         
         let config = URLSessionConfiguration.default
@@ -140,24 +140,6 @@ class FirstViewController: UIViewController {
     }
 }
 
-extension UIView {
-    func cellFocused(_ focused: Bool) {
-        var scale: CGFloat = 1.0
-        var shadowColor: CGColor = UIColor.clear.cgColor
-        
-        if focused {
-            scale = 1.1
-            shadowColor = UIColor.black.cgColor
-        }
-        
-        self.transform = CGAffineTransform(scaleX: scale, y: scale)
-        self.layer.shadowColor = shadowColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 15)
-        self.layer.shadowOpacity = 0.2
-        self.layer.shadowRadius = 15
-    }
-}
-
 extension FirstViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 486
@@ -208,7 +190,6 @@ extension FirstViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didUpdateFocusIn context: UITableViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         if let indexPath = context.nextFocusedIndexPath, let cell = tableView.cellForRow(at: indexPath) as? RowTableViewCell {
-//        if let row = context.nextFocusedView as? RowTableViewCell {
             focusedCollectionView = cell.collectionView
             updateFocusIfNeeded()
             setNeedsFocusUpdate()
