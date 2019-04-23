@@ -9,7 +9,7 @@
 import Foundation
 
 let baseUrl = "https://api.themoviedb.org/3"
-let apiKey = "api_key=fbf2dc4ff2edbff917459ed4515b26ba"
+var apiKey: String = ""
 var imageBaseUrl: String?
 let imageWidth = "w500"
 let configurationURL = URL(string: "\(baseUrl)/configuration?\(apiKey)")!
