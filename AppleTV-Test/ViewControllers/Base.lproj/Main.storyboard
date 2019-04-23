@@ -97,7 +97,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="vrY-eP-oc5" firstAttribute="top" secondItem="Wty-ET-3cB" secondAttribute="top" constant="8" id="8tT-CX-dT8"/>
-                            <constraint firstItem="ng0-wr-95k" firstAttribute="top" secondItem="vrY-eP-oc5" secondAttribute="bottom" constant="40" id="MU2-96-ezw"/>
+                            <constraint firstItem="Wty-ET-3cB" firstAttribute="bottom" secondItem="vrY-eP-oc5" secondAttribute="bottom" constant="146" id="Acv-t8-0qi"/>
                             <constraint firstItem="vrY-eP-oc5" firstAttribute="leading" secondItem="Wty-ET-3cB" secondAttribute="leading" constant="20" id="NsX-De-oKy"/>
                             <constraint firstItem="Wty-ET-3cB" firstAttribute="bottom" secondItem="ng0-wr-95k" secondAttribute="bottom" constant="20" id="NwI-vU-dGQ"/>
                             <constraint firstItem="xnO-Vy-5go" firstAttribute="top" secondItem="vrY-eP-oc5" secondAttribute="top" id="a6Q-Hi-Acg"/>

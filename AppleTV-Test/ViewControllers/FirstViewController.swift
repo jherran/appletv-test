@@ -72,30 +72,19 @@ class FirstViewController: UIViewController {
                 print("Error: did not receive data")
                 return
             }
+
+            let decoder = JSONDecoder()
+            let config = try? decoder.decode(ConfigurationObject.self, from: responseData)
             
-            do {
-                guard let result = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: Any] else {
-                    print("error trying to convert data to JSON")
-                    return
-                }
-                
-                guard let images = result["images"] as? [String: Any] else {
-                    print("Could not get images from JSON")
-                    return
-                }
-                
-                guard let imBaseUrl = images["secure_base_url"] as? String else {
-                    print("Could not get images from JSON")
-                    return
-                }
-                
+            if let images = config?.images, let imBaseUrl = images.secureBaseUrl {
                 imageBaseUrl = imBaseUrl
-                
+                if let size = images.posterSizes?.last {
+                    imageWidth = size
+                }
                 self.getFromAPI(with: discoverFilmsURL)
                 self.getFromAPI(with: discoverTVURL)
-
-            } catch  {
-                print("error trying to convert data to JSON")
+            } else {
+                print("no results")
                 return
             }
         }
@@ -191,7 +180,6 @@ extension FirstViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didUpdateFocusIn context: UITableViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         if let indexPath = context.nextFocusedIndexPath, let cell = tableView.cellForRow(at: indexPath) as? RowTableViewCell {
             focusedCollectionView = cell.collectionView
-            updateFocusIfNeeded()
             setNeedsFocusUpdate()
         }
     }
