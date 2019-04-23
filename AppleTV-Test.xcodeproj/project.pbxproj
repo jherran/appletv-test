@@ -22,6 +22,7 @@
 		18C992C222609E4900845BAF /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C992C122609E4900845BAF /* CustomCollectionViewCell.xib */; };
 		18F48F33226EF640005928A3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F48F32226EF640005928A3 /* UIViewExtension.swift */; };
 		18F48F35226EF6E9005928A3 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F48F34226EF6E9005928A3 /* DateExtension.swift */; };
+		18F48F37226EFD36005928A3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F48F36226EFD36005928A3 /* Configuration.swift */; };
 		D9E2447DECE77FF38AC1CDD6 /* Pods_AppleTV_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0429105E235F305837B29EC /* Pods_AppleTV_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		18C992C122609E4900845BAF /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		18F48F32226EF640005928A3 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		18F48F34226EF6E9005928A3 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		18F48F36226EFD36005928A3 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		4CD01C245D871F546BA2BBEA /* Pods-AppleTV-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTV-Test.release.xcconfig"; path = "Target Support Files/Pods-AppleTV-Test/Pods-AppleTV-Test.release.xcconfig"; sourceTree = "<group>"; };
 		D2DFCA003F142D8C3515B6AA /* Pods-AppleTV-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTV-Test.debug.xcconfig"; path = "Target Support Files/Pods-AppleTV-Test/Pods-AppleTV-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F0429105E235F305837B29EC /* Pods_AppleTV_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleTV_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				18BF62C3225E43DB0009865B /* AppDelegate.swift */,
+				18F48F36226EFD36005928A3 /* Configuration.swift */,
 				18F48F32226EF640005928A3 /* UIViewExtension.swift */,
 				18F48F34226EF6E9005928A3 /* DateExtension.swift */,
 				18046BB62265C73500187BB6 /* ResponseObject.swift */,
@@ -345,6 +348,7 @@
 				18F48F33226EF640005928A3 /* UIViewExtension.swift in Sources */,
 				18BF62C6225E43DB0009865B /* FirstViewController.swift in Sources */,
 				186A61D4225F4E9B002A781F /* CustomCollectionViewCell.swift in Sources */,
+				18F48F37226EFD36005928A3 /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
