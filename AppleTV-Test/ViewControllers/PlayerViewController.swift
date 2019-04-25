@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  PlayerViewController.swift
 //  AppleTV-Test
 //
 //  Created by José Ángel Herrán on 10/04/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class FirstViewController: UIViewController {
+class PlayerViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,7 +27,7 @@ class FirstViewController: UIViewController {
             }
         }
     }
-    
+        
     var focusedCollectionView: UICollectionView?
     
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
@@ -129,7 +129,7 @@ class FirstViewController: UIViewController {
     }
 }
 
-extension FirstViewController: UITableViewDelegate {
+extension PlayerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 486
     }
@@ -146,7 +146,7 @@ extension FirstViewController: UITableViewDelegate {
     }
 }
 
-extension FirstViewController: UITableViewDataSource {
+extension PlayerViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         var num = 0
         if popularMovies.count > 0 {
@@ -185,7 +185,7 @@ extension FirstViewController: UITableViewDataSource {
     }
 }
 
-extension FirstViewController: ItemSelectedDelegate {
+extension PlayerViewController: ItemSelectedDelegate {
     func itemSelected(movie: Media) {
         performSegue(withIdentifier: "filmSegue", sender: movie)
     }

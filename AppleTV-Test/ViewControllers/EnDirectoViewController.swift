@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  EnDirectoViewController.swift
 //  AppleTV-Test
 //
 //  Created by José Ángel Herrán on 10/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class EnDirectoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

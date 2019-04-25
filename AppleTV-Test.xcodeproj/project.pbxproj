@@ -15,12 +15,12 @@
 		186A61D6225F7DE0002A781F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D5225F7DE0002A781F /* ThirdViewController.swift */; };
 		18BD9ABD226606E70078843C /* RowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD9ABC226606E70078843C /* RowTableViewCell.xib */; };
 		18BF62C4225E43DB0009865B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF62C3225E43DB0009865B /* AppDelegate.swift */; };
-		18BF62C6225E43DB0009865B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF62C5225E43DB0009865B /* FirstViewController.swift */; };
-		18BF62C8225E43DB0009865B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF62C7225E43DB0009865B /* SecondViewController.swift */; };
+		18BF62C6225E43DB0009865B /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF62C5225E43DB0009865B /* PlayerViewController.swift */; };
+		18BF62C8225E43DB0009865B /* EnDirectoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF62C7225E43DB0009865B /* EnDirectoViewController.swift */; };
 		18BF62CB225E43DB0009865B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BF62C9225E43DB0009865B /* Main.storyboard */; };
 		18BF62CD225E43DD0009865B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BF62CC225E43DD0009865B /* Assets.xcassets */; };
 		18C992C222609E4900845BAF /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C992C122609E4900845BAF /* CustomCollectionViewCell.xib */; };
-		18F48F33226EF640005928A3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F48F32226EF640005928A3 /* UIViewExtension.swift */; };
+		18F48F33226EF640005928A3 /* CustomCollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F48F32226EF640005928A3 /* CustomCollectionViewCellExtension.swift */; };
 		18F48F35226EF6E9005928A3 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F48F34226EF6E9005928A3 /* DateExtension.swift */; };
 		18F48F37226EFD36005928A3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F48F36226EFD36005928A3 /* Configuration.swift */; };
 		18F48F39226F0266005928A3 /* ConfigurationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F48F38226F0266005928A3 /* ConfigurationObject.swift */; };
@@ -55,15 +55,15 @@
 		18BD9ABC226606E70078843C /* RowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowTableViewCell.xib; sourceTree = "<group>"; };
 		18BF62C0225E43DB0009865B /* AppleTV-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppleTV-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BF62C3225E43DB0009865B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18BF62C5225E43DB0009865B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		18BF62C7225E43DB0009865B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		18BF62C5225E43DB0009865B /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		18BF62C7225E43DB0009865B /* EnDirectoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnDirectoViewController.swift; sourceTree = "<group>"; };
 		18BF62CA225E43DB0009865B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18BF62CC225E43DD0009865B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18BF62CE225E43DD0009865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BF62D3225E43DD0009865B /* AppleTV-TestAppleTV-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppleTV-TestAppleTV-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BF62DE225E43DD0009865B /* AppleTV-TestUIAppleTV-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppleTV-TestUIAppleTV-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C992C122609E4900845BAF /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
-		18F48F32226EF640005928A3 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		18F48F32226EF640005928A3 /* CustomCollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		18F48F34226EF6E9005928A3 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		18F48F36226EFD36005928A3 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		18F48F38226F0266005928A3 /* ConfigurationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationObject.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		18F48F3D226F1B58005928A3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				18F48F32226EF640005928A3 /* UIViewExtension.swift */,
+				18F48F32226EF640005928A3 /* CustomCollectionViewCellExtension.swift */,
 				18F48F34226EF6E9005928A3 /* DateExtension.swift */,
 			);
 			path = Extensions;
@@ -169,8 +169,8 @@
 		18F48F3F226F1B90005928A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				18BF62C5225E43DB0009865B /* FirstViewController.swift */,
-				18BF62C7225E43DB0009865B /* SecondViewController.swift */,
+				18BF62C5225E43DB0009865B /* PlayerViewController.swift */,
+				18BF62C7225E43DB0009865B /* EnDirectoViewController.swift */,
 				186A61D5225F7DE0002A781F /* ThirdViewController.swift */,
 				18BF62C9225E43DB0009865B /* Main.storyboard */,
 			);
@@ -376,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BF62C8225E43DB0009865B /* SecondViewController.swift in Sources */,
+				18BF62C8225E43DB0009865B /* EnDirectoViewController.swift in Sources */,
 				18F48F3B226F02E2005928A3 /* ConfigurationImage.swift in Sources */,
 				18F48F35226EF6E9005928A3 /* DateExtension.swift in Sources */,
 				18BF62C4225E43DB0009865B /* AppDelegate.swift in Sources */,
@@ -384,8 +384,8 @@
 				18046BB72265C73500187BB6 /* ResponseObject.swift in Sources */,
 				186A61D6225F7DE0002A781F /* ThirdViewController.swift in Sources */,
 				18046BB92265EFAD00187BB6 /* RowTableViewCell.swift in Sources */,
-				18F48F33226EF640005928A3 /* UIViewExtension.swift in Sources */,
-				18BF62C6225E43DB0009865B /* FirstViewController.swift in Sources */,
+				18F48F33226EF640005928A3 /* CustomCollectionViewCellExtension.swift in Sources */,
+				18BF62C6225E43DB0009865B /* PlayerViewController.swift in Sources */,
 				186A61D4225F4E9B002A781F /* CustomCollectionViewCell.swift in Sources */,
 				18F48F37226EFD36005928A3 /* Configuration.swift in Sources */,
 				18F48F39226F0266005928A3 /* ConfigurationObject.swift in Sources */,
