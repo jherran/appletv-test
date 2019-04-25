@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellId" id="cs9-fL-hsh" customClass="CustomCollectionViewCell" customModule="Test" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellId" id="cs9-fL-hsh" customClass="CustomCollectionViewCell" customModule="AppleTV_Test" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="332" height="443"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -23,21 +23,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="332" height="443"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU8-gk-pfc">
-                        <rect key="frame" x="10" y="397" width="312" height="36"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="0.0" y="393" width="332" height="50"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kjm-1F-SLB"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="highlightedColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="jQV-PJ-eQh" firstAttribute="top" secondItem="cs9-fL-hsh" secondAttribute="top" id="O9b-aG-Rep"/>
-                <constraint firstAttribute="bottom" secondItem="JU8-gk-pfc" secondAttribute="bottom" constant="10" id="RAH-iS-ijf"/>
+                <constraint firstItem="JU8-gk-pfc" firstAttribute="trailing" secondItem="jQV-PJ-eQh" secondAttribute="trailing" id="RWk-h5-Tlo"/>
                 <constraint firstAttribute="trailing" secondItem="jQV-PJ-eQh" secondAttribute="trailing" id="W9N-zp-b3R"/>
                 <constraint firstItem="jQV-PJ-eQh" firstAttribute="leading" secondItem="cs9-fL-hsh" secondAttribute="leading" id="XTn-GN-0aO"/>
-                <constraint firstItem="JU8-gk-pfc" firstAttribute="leading" secondItem="cs9-fL-hsh" secondAttribute="leading" constant="10" id="dBo-4X-q24"/>
-                <constraint firstAttribute="trailing" secondItem="JU8-gk-pfc" secondAttribute="trailing" constant="10" id="kEz-A3-Os7"/>
+                <constraint firstItem="JU8-gk-pfc" firstAttribute="leading" secondItem="jQV-PJ-eQh" secondAttribute="leading" id="Z0f-zh-SHQ"/>
+                <constraint firstItem="JU8-gk-pfc" firstAttribute="bottom" secondItem="jQV-PJ-eQh" secondAttribute="bottom" id="f6Q-2z-fhH"/>
                 <constraint firstAttribute="bottom" secondItem="jQV-PJ-eQh" secondAttribute="bottom" id="p8G-lQ-aT5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="UfQ-zh-SG6"/>

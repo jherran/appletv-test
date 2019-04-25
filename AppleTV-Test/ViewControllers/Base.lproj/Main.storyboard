@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Player-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="PlayerViewController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -40,7 +40,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EDn-GT-5E5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Player" id="acW-dT-cKf" userLabel="Player"/>
                     <connections>
                         <outlet property="tableView" destination="1NV-FM-ezv" id="SOM-03-l8N"/>
                         <segue destination="kBS-M1-MD0" kind="showDetail" identifier="filmSegue" id="sZ7-9b-E4a"/>
@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2246" y="-640"/>
+            <point key="canvasLocation" x="2246" y="-2429"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="PAE-57-UAm">
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="4522" y="-640"/>
         </scene>
-        <!--Second-->
+        <!--En directo-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="EnDirectoViewController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -160,11 +160,68 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tzs-WY-Qt2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="En directo" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2246" y="624"/>
+            <point key="canvasLocation" x="2300" y="-882"/>
+        </scene>
+        <!--Buscador-->
+        <scene sceneID="xgx-JV-LTB">
+            <objects>
+                <viewController id="hhX-03-yTo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7ey-ht-Yog"/>
+                        <viewControllerLayoutGuide type="bottom" id="cW5-HZ-eYV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xJi-y0-m7x">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jqS-HM-ux0"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Buscador" id="RRc-qp-F4S" userLabel="Buscador"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3O-xM-o03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="628"/>
+        </scene>
+        <!--Ajustes-->
+        <scene sceneID="Vki-vJ-aGb">
+            <objects>
+                <viewController id="nnQ-qg-e0F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eac-9h-CXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZXT-NA-cMs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1bM-Ol-7r2">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="U3X-LM-TFU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajustes" id="HHv-U7-aFW" userLabel="Ajustes"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOt-qQ-26a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="2141"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="mxw-2I-cGJ">
+            <objects>
+                <viewController id="W4P-fY-nNY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wz6-3P-EQ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="BpK-nP-yqx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jYH-0I-xuy">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rpg-yB-4IO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Login" id="9OK-eU-NTa" userLabel="Login"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1j5-dT-xyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="3518"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -178,6 +235,9 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="hhX-03-yTo" kind="relationship" relationship="viewControllers" id="SgT-4X-Us7"/>
+                        <segue destination="nnQ-qg-e0F" kind="relationship" relationship="viewControllers" id="B0n-lc-zaD"/>
+                        <segue destination="W4P-fY-nNY" kind="relationship" relationship="viewControllers" id="DGQ-WR-2Ev"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -185,8 +245,4 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
-    </resources>
 </document>

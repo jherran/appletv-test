@@ -64,13 +64,13 @@ extension RowTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         
-        if let indexPath = context.nextFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) {
+        if let indexPath = context.nextFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
             coordinator.addCoordinatedAnimations({() -> Void in
                 cell.cellFocused(true)
                 cell.addMotionEffect(self.motionEffectGroup)
             }, completion: nil)
         }
-        if let indexPath = context.previouslyFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) {
+        if let indexPath = context.previouslyFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewCell {
             coordinator.addCoordinatedAnimations({() -> Void in
                 cell.cellFocused(false)
                 cell.removeMotionEffect(self.motionEffectGroup)

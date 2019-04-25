@@ -1,5 +1,5 @@
 //
-//  UIViewExtension.swift
+//  CustomCollectionViewCellExtension.swift
 //  AppleTV-Test
 //
 //  Created by José Ángel Herrán on 23/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+extension CustomCollectionViewCell {
     func cellFocused(_ focused: Bool) {
         var scale: CGFloat = 1.0
         var shadowColor: CGColor = UIColor.clear.cgColor
@@ -16,6 +16,11 @@ extension UIView {
         if focused {
             scale = 1.1
             shadowColor = UIColor.black.cgColor
+            cellTitle.backgroundColor = .white
+            cellTitle.textColor = .black
+        } else {
+            cellTitle.backgroundColor = .black
+            cellTitle.textColor = .white
         }
         
         self.transform = CGAffineTransform(scaleX: scale, y: scale)
