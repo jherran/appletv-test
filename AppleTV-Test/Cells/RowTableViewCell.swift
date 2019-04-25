@@ -27,7 +27,8 @@ class RowTableViewCell: UITableViewCell {
         super.awakeFromNib()
         backgroundColor = .clear
         contentView.backgroundColor = .clear
-        
+        focusStyle = .custom
+
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 80
