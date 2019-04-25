@@ -30,7 +30,7 @@ class RowTableViewCell: UITableViewCell {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 40
+        layout.minimumLineSpacing = 80
         
         collectionView.backgroundColor = .clear
         collectionView.collectionViewLayout = layout
