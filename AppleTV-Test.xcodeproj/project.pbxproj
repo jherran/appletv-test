@@ -15,6 +15,10 @@
 		1828EF982271FDA1003EB65D /* TextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828EF962271FDA1003EB65D /* TextCollectionViewCell.swift */; };
 		1828EF9B2271FEC3003EB65D /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828EF992271FEC3003EB65D /* CategoryTableViewCell.xib */; };
 		1828EF9C2271FEC3003EB65D /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828EF9A2271FEC3003EB65D /* CategoryTableViewCell.swift */; };
+		1828EF9F2272F329003EB65D /* HighlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828EF9D2272F329003EB65D /* HighlightTableViewCell.swift */; };
+		1828EFA02272F329003EB65D /* HighlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828EF9E2272F329003EB65D /* HighlightTableViewCell.xib */; };
+		1828EFA32272F337003EB65D /* BigImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828EFA12272F336003EB65D /* BigImageCollectionViewCell.xib */; };
+		1828EFA42272F337003EB65D /* BigImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828EFA22272F336003EB65D /* BigImageCollectionViewCell.swift */; };
 		186A61D4225F4E9B002A781F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D3225F4E9B002A781F /* ImageCollectionViewCell.swift */; };
 		186A61D6225F7DE0002A781F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D5225F7DE0002A781F /* ThirdViewController.swift */; };
 		18BD9ABD226606E70078843C /* RowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD9ABC226606E70078843C /* RowTableViewCell.xib */; };
@@ -58,6 +62,10 @@
 		1828EF962271FDA1003EB65D /* TextCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCollectionViewCell.swift; sourceTree = "<group>"; };
 		1828EF992271FEC3003EB65D /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		1828EF9A2271FEC3003EB65D /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		1828EF9D2272F329003EB65D /* HighlightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightTableViewCell.swift; sourceTree = "<group>"; };
+		1828EF9E2272F329003EB65D /* HighlightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighlightTableViewCell.xib; sourceTree = "<group>"; };
+		1828EFA12272F336003EB65D /* BigImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BigImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		1828EFA22272F336003EB65D /* BigImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		186A61D3225F4E9B002A781F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		186A61D5225F7DE0002A781F /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		18BD9ABC226606E70078843C /* RowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowTableViewCell.xib; sourceTree = "<group>"; };
@@ -174,6 +182,10 @@
 				1828EF992271FEC3003EB65D /* CategoryTableViewCell.xib */,
 				1828EF962271FDA1003EB65D /* TextCollectionViewCell.swift */,
 				1828EF952271FDA1003EB65D /* TextCollectionViewCell.xib */,
+				1828EF9D2272F329003EB65D /* HighlightTableViewCell.swift */,
+				1828EF9E2272F329003EB65D /* HighlightTableViewCell.xib */,
+				1828EFA22272F336003EB65D /* BigImageCollectionViewCell.swift */,
+				1828EFA12272F336003EB65D /* BigImageCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -318,7 +330,9 @@
 				18BF62CB225E43DB0009865B /* Main.storyboard in Resources */,
 				1828EF972271FDA1003EB65D /* TextCollectionViewCell.xib in Resources */,
 				18C992C222609E4900845BAF /* ImageCollectionViewCell.xib in Resources */,
+				1828EFA02272F329003EB65D /* HighlightTableViewCell.xib in Resources */,
 				18050A64226E18770071B552 /* Keys.plist in Resources */,
+				1828EFA32272F337003EB65D /* BigImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +406,8 @@
 			files = (
 				18BF62C8225E43DB0009865B /* EnDirectoViewController.swift in Sources */,
 				18F48F3B226F02E2005928A3 /* ConfigurationImage.swift in Sources */,
+				1828EF9F2272F329003EB65D /* HighlightTableViewCell.swift in Sources */,
+				1828EFA42272F337003EB65D /* BigImageCollectionViewCell.swift in Sources */,
 				18F48F35226EF6E9005928A3 /* DateExtension.swift in Sources */,
 				1828EF982271FDA1003EB65D /* TextCollectionViewCell.swift in Sources */,
 				18BF62C4225E43DB0009865B /* AppDelegate.swift in Sources */,
