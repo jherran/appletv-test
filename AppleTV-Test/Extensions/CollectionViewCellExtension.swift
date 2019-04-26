@@ -8,6 +8,25 @@
 
 import UIKit
 
+extension BigImageCollectionViewCell {
+    func cellFocused(_ focused: Bool) {
+        var scale: CGFloat = 1.0
+        var shadowColor: CGColor = UIColor.clear.cgColor
+        
+        if focused {
+            scale = 1.1
+            shadowColor = UIColor.black.cgColor
+            cellTitle.backgroundColor = .white
+            cellTitle.textColor = .black
+        } else {
+            cellTitle.backgroundColor = .black
+            cellTitle.textColor = .white
+        }
+        
+        self.transformCell(with: scale, scaleY: scale, shadowColor: shadowColor, offset: CGSize(width: 0, height: 15))
+    }
+}
+
 extension ImageCollectionViewCell {
     func cellFocused(_ focused: Bool) {
         var scale: CGFloat = 1.0
