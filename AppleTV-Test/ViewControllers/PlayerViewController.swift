@@ -27,21 +27,15 @@ class PlayerViewController: UIViewController {
             }
         }
     }
+    
+    var categories: [String] = ["SERIES", "PROGRAMAS", "NOTICIAS", "TELENOVELAS", "DOCUMENTALES"]
         
-    var focusedCollectionView: UICollectionView?
-    
-    override var preferredFocusEnvironments: [UIFocusEnvironment] {
-        if let focused = focusedCollectionView {
-            return [focused]
-        }
-        return super.preferredFocusEnvironments
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "RowTableViewCell", bundle: nil), forCellReuseIdentifier: "rowCell")
-        
+        tableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "categoryCell")
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.remembersLastFocusedIndexPath = true
@@ -130,15 +124,21 @@ class PlayerViewController: UIViewController {
 }
 
 extension PlayerViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 486
+        return indexPath.section > 0 ? 486 : 355
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0, 2:
-            return "Discover popular movies"
+        case 0:
+            return nil
         case 1, 3:
+            return "Discover popular movies"
+        case 2, 4:
             return "Discover popular tv shows"
         default:
             return nil
@@ -149,6 +149,9 @@ extension PlayerViewController: UITableViewDelegate {
 extension PlayerViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         var num = 0
+        if categories.count > 0 {
+            num += 1
+        }
         if popularMovies.count > 0 {
             num += 2
         }
@@ -163,12 +166,18 @@ extension PlayerViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as? CategoryTableViewCell
+            cell?.delegate = self
+            cell?.categories = categories
+            return cell!
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "rowCell", for: indexPath) as? RowTableViewCell
         cell?.delegate = self
         switch indexPath.section {
-        case 0, 2:
-            cell?.mediaItems = popularMovies
         case 1, 3:
+            cell?.mediaItems = popularMovies
+        case 2, 4:
             cell?.mediaItems = popularTV
         default:
             cell?.mediaItems = []
@@ -176,17 +185,16 @@ extension PlayerViewController: UITableViewDataSource {
         
         return cell!
     }
-    
-    func tableView(_ tableView: UITableView, didUpdateFocusIn context: UITableViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        if let indexPath = context.nextFocusedIndexPath, let cell = tableView.cellForRow(at: indexPath) as? RowTableViewCell {
-            focusedCollectionView = cell.collectionView
-            setNeedsFocusUpdate()
-        }
-    }
 }
 
 extension PlayerViewController: ItemSelectedDelegate {
     func itemSelected(movie: Media) {
         performSegue(withIdentifier: "filmSegue", sender: movie)
+    }
+}
+
+extension PlayerViewController: CategorySelectedDelegate {
+    func categoryDelegateSelected(category: String) {
+        print("\(category) selected!")
     }
 }

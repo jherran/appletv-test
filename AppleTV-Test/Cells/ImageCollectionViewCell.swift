@@ -1,5 +1,5 @@
 //
-//  CustomCollectionViewCell.swift
+//  ImageCollectionViewCell.swift
 //  AppleTV-Test
 //
 //  Created by José Ángel Herrán on 11/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomCollectionViewCell: UICollectionViewCell {
+class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var cellTitle: UILabel!
     

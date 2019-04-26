@@ -1,5 +1,5 @@
 //
-//  RowTableViewCell.swift
+//  CategoryTableViewCell.swift
 //  AppleTV-Test
 //
 //  Created by José Ángel Herrán on 16/04/2019.
@@ -8,20 +8,20 @@
 
 import UIKit
 
-protocol ItemSelectedDelegate {
-    func itemSelected(movie: Media)
+protocol CategorySelectedDelegate {
+    func categoryDelegateSelected(category: String)
 }
 
-class RowTableViewCell: UITableViewCell {
+class CategoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var mediaItems: [Media] = [] {
+    var categories: [String] = [] {
         didSet {
             collectionView.reloadData()
         }
     }
-    var delegate: ItemSelectedDelegate?
+    var delegate: CategorySelectedDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,7 +35,7 @@ class RowTableViewCell: UITableViewCell {
         collectionView.collectionViewLayout = layout
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionViewCellId")
+        collectionView.register(UINib(nibName: "TextCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "textCollectionViewCellId")
         collectionView.clipsToBounds = false
         collectionView.remembersLastFocusedIndexPath = true
     }
@@ -56,20 +56,20 @@ class RowTableViewCell: UITableViewCell {
     }()
 }
 
-extension RowTableViewCell: UICollectionViewDelegate {
+extension CategoryTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
         return true
     }
     
     func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         
-        if let indexPath = context.nextFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? ImageCollectionViewCell {
+        if let indexPath = context.nextFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? TextCollectionViewCell {
             coordinator.addCoordinatedAnimations({() -> Void in
                 cell.cellFocused(true)
                 cell.addMotionEffect(self.motionEffectGroup)
             }, completion: nil)
         }
-        if let indexPath = context.previouslyFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? ImageCollectionViewCell {
+        if let indexPath = context.previouslyFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? TextCollectionViewCell {
             coordinator.addCoordinatedAnimations({() -> Void in
                 cell.cellFocused(false)
                 cell.removeMotionEffect(self.motionEffectGroup)
@@ -79,28 +79,25 @@ extension RowTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.itemSelected(movie: mediaItems[indexPath.row])
+            delegate.categoryDelegateSelected(category: categories[indexPath.row])
         }
     }
 }
 
-extension RowTableViewCell: UICollectionViewDataSource {
+extension CategoryTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mediaItems.count
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCellId", for: indexPath) as! ImageCollectionViewCell
-        if let posterPath = self.mediaItems[indexPath.row].posterURL {
-            collectionViewCell.image.kf.setImage(with: posterPath)
-        }
-        collectionViewCell.cellTitle.text = mediaItems[indexPath.row].title ?? mediaItems[indexPath.row].name
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "textCollectionViewCellId", for: indexPath) as! TextCollectionViewCell
+        collectionViewCell.cellTitle.text = categories[indexPath.row]
         return collectionViewCell
     }
 }
 
-extension RowTableViewCell: UICollectionViewDelegateFlowLayout {
+extension CategoryTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 335, height: 445)
+        return CGSize(width: 425, height: 302)
     }
 }
