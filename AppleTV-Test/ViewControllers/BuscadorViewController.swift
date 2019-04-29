@@ -12,18 +12,12 @@ class BuscadorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addSearch()
     }
     
     func addSearch() {
-
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
-        searchController.delegate = self
-        
-        searchController.searchBar.placeholder = "Search Title"
-        searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
         searchController.searchBar.searchBarStyle = .prominent
         
@@ -39,16 +33,6 @@ class BuscadorViewController: UIViewController {
 
 extension BuscadorViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        
+        print(searchController.searchBar.text ?? "")
     }
-}
-
-extension BuscadorViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-    }
-}
-
-extension BuscadorViewController: UISearchControllerDelegate {
-
 }
