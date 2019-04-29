@@ -10,10 +10,6 @@ import UIKit
 
 class BuscadorViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    let searchController: UISearchController = UISearchController(searchResultsController: nil)
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +17,8 @@ class BuscadorViewController: UIViewController {
     }
     
     func addSearch() {
-        
+
+        let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.delegate = self
         
