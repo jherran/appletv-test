@@ -204,24 +204,107 @@
             </objects>
             <point key="canvasLocation" x="2300" y="2141"/>
         </scene>
-        <!--Login-->
-        <scene sceneID="mxw-2I-cGJ">
+        <!--Login Info View Controller-->
+        <scene sceneID="ApI-2h-1O0">
             <objects>
-                <viewController id="W4P-fY-nNY" sceneMemberID="viewController">
+                <viewController id="B1d-xf-jin" customClass="LoginInfoViewController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wz6-3P-EQ0"/>
-                        <viewControllerLayoutGuide type="bottom" id="BpK-nP-yqx"/>
+                        <viewControllerLayoutGuide type="top" id="cXh-49-i9H"/>
+                        <viewControllerLayoutGuide type="bottom" id="pGk-1G-vkP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jYH-0I-xuy">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                    <view key="view" contentMode="scaleToFill" id="X81-jM-Pca">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="rpg-yB-4IO"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="684-Po-tTI">
+                                <rect key="frame" x="30" y="215" width="1155" height="795"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-oS-zWL">
+                                <rect key="frame" x="40" y="110" width="1145" height="55"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ChX-oS-zWL" firstAttribute="leading" secondItem="af9-pi-xAt" secondAttribute="leading" constant="40" id="3NM-B4-zxz"/>
+                            <constraint firstItem="684-Po-tTI" firstAttribute="leading" secondItem="af9-pi-xAt" secondAttribute="leading" constant="30" id="KKm-Tr-P1P"/>
+                            <constraint firstItem="684-Po-tTI" firstAttribute="top" secondItem="ChX-oS-zWL" secondAttribute="bottom" constant="50" id="NPD-pR-Dmd"/>
+                            <constraint firstItem="af9-pi-xAt" firstAttribute="bottom" secondItem="684-Po-tTI" secondAttribute="bottom" constant="10" id="SrO-rA-Qtm"/>
+                            <constraint firstItem="af9-pi-xAt" firstAttribute="trailing" secondItem="ChX-oS-zWL" secondAttribute="trailing" constant="10" id="Yye-m7-Ag9"/>
+                            <constraint firstItem="af9-pi-xAt" firstAttribute="trailing" secondItem="684-Po-tTI" secondAttribute="trailing" constant="10" id="csK-WA-ucL"/>
+                            <constraint firstItem="ChX-oS-zWL" firstAttribute="top" secondItem="af9-pi-xAt" secondAttribute="top" constant="50" id="fAn-RS-a9g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="af9-pi-xAt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Login" id="9OK-eU-NTa" userLabel="Login"/>
+                    <connections>
+                        <outlet property="headerTitle" destination="ChX-oS-zWL" id="Qwp-9V-k3J"/>
+                        <outlet property="tableView" destination="684-Po-tTI" id="WQ2-0w-rag"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1j5-dT-xyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aue-Ba-Bnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2314" y="3518"/>
+            <point key="canvasLocation" x="2300" y="5264"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="pW5-vF-b9K">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="WFw-4B-A45" customClass="LoginMenuTableViewController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="lko-4Y-nya">
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="b4y-no-t7I">
+                                <rect key="frame" x="90" y="66" width="499" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b4y-no-t7I" id="6Yp-gh-4n3">
+                                    <rect key="frame" x="0.0" y="0.0" width="499" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WFw-4B-A45" id="EWb-tz-Ph1"/>
+                            <outlet property="delegate" destination="WFw-4B-A45" id="dNg-6e-Xue"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Login" id="saX-wm-ch3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNo-aY-xhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4498" y="5264"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="teS-Bb-OCT">
+            <objects>
+                <navigationController id="oL9-lh-hqm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="adO-fo-KB5">
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WFw-4B-A45" kind="relationship" relationship="rootViewController" id="VV0-AN-7xs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oW-yk-ZYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4498" y="3739"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="lhU-55-Vh2">
+            <objects>
+                <splitViewController id="BAf-2e-87Q" userLabel="Login" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Login" id="Uh7-xv-ilV"/>
+                    <connections>
+                        <segue destination="oL9-lh-hqm" kind="relationship" relationship="masterViewController" id="zbD-Lr-Qpe"/>
+                        <segue destination="B1d-xf-jin" kind="relationship" relationship="detailViewController" id="VSf-xq-xY6"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ah-QO-22t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="3739"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -237,7 +320,7 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="hhX-03-yTo" kind="relationship" relationship="viewControllers" id="SgT-4X-Us7"/>
                         <segue destination="nnQ-qg-e0F" kind="relationship" relationship="viewControllers" id="B0n-lc-zaD"/>
-                        <segue destination="W4P-fY-nNY" kind="relationship" relationship="viewControllers" id="DGQ-WR-2Ev"/>
+                        <segue destination="BAf-2e-87Q" kind="relationship" relationship="viewControllers" id="8Fm-h0-JMH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
