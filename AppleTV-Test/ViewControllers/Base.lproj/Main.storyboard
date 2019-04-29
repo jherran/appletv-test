@@ -169,7 +169,7 @@
         <!--Buscador-->
         <scene sceneID="xgx-JV-LTB">
             <objects>
-                <viewController id="hhX-03-yTo" sceneMemberID="viewController">
+                <viewController id="hhX-03-yTo" customClass="BuscadorViewController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7ey-ht-Yog"/>
                         <viewControllerLayoutGuide type="bottom" id="cW5-HZ-eYV"/>
