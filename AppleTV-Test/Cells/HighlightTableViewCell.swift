@@ -19,19 +19,15 @@ class HighlightTableViewCell: UITableViewCell {
     var mediaItems: [Media] = [] {
         didSet {
             collectionView.reloadData()
-            selectCenterCell = true
+            if mediaItems.count > 0 {
+                let midIndexPath = IndexPath(row: mediaItems.count / 2, section: 0)
+                collectionView.scrollToItem(at: midIndexPath, at: .centeredHorizontally, animated: false)
+            }
         }
     }
     var delegate: HighlightSelectedDelegate?
-    var selectCenterCell: Bool = false
+    var selectCenterCell: Bool = true
     let firstItemIndexPath = IndexPath(item: 1, section: 0)
-    
-    override var preferredFocusEnvironments: [UIFocusEnvironment] {
-        if let cell = collectionView.cellForItem(at: firstItemIndexPath) as? BigImageCollectionViewCell, selectCenterCell {
-            return [cell]
-        }
-        return super.preferredFocusEnvironments
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,21 +46,6 @@ class HighlightTableViewCell: UITableViewCell {
         collectionView.remembersLastFocusedIndexPath = true
         collectionView.isScrollEnabled = false
     }
-    
-    private lazy var motionEffectGroup: UIMotionEffectGroup = {
-        let horizontalAxisMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
-        horizontalAxisMotionEffect.minimumRelativeValue = -8.0
-        horizontalAxisMotionEffect.maximumRelativeValue = 8
-        
-        let verticalAxisMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
-        verticalAxisMotionEffect.minimumRelativeValue = -8.0
-        verticalAxisMotionEffect.maximumRelativeValue = 8
-        
-        let group = UIMotionEffectGroup()
-        group.motionEffects = [horizontalAxisMotionEffect, verticalAxisMotionEffect]
-        
-        return group
-    }()
 }
 
 extension HighlightTableViewCell: UICollectionViewDelegate {
@@ -77,22 +58,17 @@ extension HighlightTableViewCell: UICollectionViewDelegate {
         if let indexPath = context.nextFocusedIndexPath, !collectionView.isScrollEnabled {
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
-
-        if selectCenterCell && mediaItems.count > 1 {
-            collectionView.scrollToItem(at: firstItemIndexPath, at: .centeredHorizontally, animated: true)
-            selectCenterCell = false
-        }
         
         if let indexPath = context.nextFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? BigImageCollectionViewCell {
             coordinator.addCoordinatedAnimations({() -> Void in
                 cell.cellFocused(true)
-                cell.addMotionEffect(self.motionEffectGroup)
+                cell.addMotionEffect(motionEffectGroup)
             }, completion: nil)
         }
         if let indexPath = context.previouslyFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? BigImageCollectionViewCell {
             coordinator.addCoordinatedAnimations({() -> Void in
                 cell.cellFocused(false)
-                cell.removeMotionEffect(self.motionEffectGroup)
+                cell.removeMotionEffect(motionEffectGroup)
             }, completion: nil)
         }
     }

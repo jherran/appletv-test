@@ -39,21 +39,6 @@ class RowTableViewCell: UITableViewCell {
         collectionView.clipsToBounds = false
         collectionView.remembersLastFocusedIndexPath = true
     }
-    
-    private lazy var motionEffectGroup: UIMotionEffectGroup = {
-        let horizontalAxisMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
-        horizontalAxisMotionEffect.minimumRelativeValue = -8.0
-        horizontalAxisMotionEffect.maximumRelativeValue = 8
-        
-        let verticalAxisMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
-        verticalAxisMotionEffect.minimumRelativeValue = -8.0
-        verticalAxisMotionEffect.maximumRelativeValue = 8
-        
-        let group = UIMotionEffectGroup()
-        group.motionEffects = [horizontalAxisMotionEffect, verticalAxisMotionEffect]
-        
-        return group
-    }()
 }
 
 extension RowTableViewCell: UICollectionViewDelegate {
@@ -66,13 +51,13 @@ extension RowTableViewCell: UICollectionViewDelegate {
         if let indexPath = context.nextFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? ImageCollectionViewCell {
             coordinator.addCoordinatedAnimations({() -> Void in
                 cell.cellFocused(true)
-                cell.addMotionEffect(self.motionEffectGroup)
+                cell.addMotionEffect(motionEffectGroup)
             }, completion: nil)
         }
         if let indexPath = context.previouslyFocusedIndexPath, let cell = collectionView.cellForItem(at: indexPath) as? ImageCollectionViewCell {
             coordinator.addCoordinatedAnimations({() -> Void in
                 cell.cellFocused(false)
-                cell.removeMotionEffect(self.motionEffectGroup)
+                cell.removeMotionEffect(motionEffectGroup)
             }, completion: nil)
         }
     }
