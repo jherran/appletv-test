@@ -188,6 +188,7 @@ extension PlayerViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "highlightCell", for: indexPath) as? HighlightTableViewCell
             cell?.delegate = self
             cell?.mediaItems = highlightPopularMovies
+            cell?.backgroundColor = .red
             return cell!
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as? CategoryTableViewCell
