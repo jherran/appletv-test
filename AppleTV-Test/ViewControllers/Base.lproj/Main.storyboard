@@ -248,24 +248,6 @@
             </objects>
             <point key="canvasLocation" x="2300" y="5176"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Qc5-A4-WSk">
-            <objects>
-                <viewController id="d11-Jx-E6l" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fF0-jd-2VM"/>
-                        <viewControllerLayoutGuide type="bottom" id="CLa-nc-bnE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FE2-Td-qft">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="kry-Up-h4Y"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0xi-Sl-LLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2901" y="6536"/>
-        </scene>
         <!--Login-->
         <scene sceneID="pW5-vF-b9K">
             <objects>
@@ -274,7 +256,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="b4y-no-t7I">
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="b4y-no-t7I">
                                 <rect key="frame" x="90" y="66" width="499" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b4y-no-t7I" id="6Yp-gh-4n3">
