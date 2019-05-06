@@ -115,13 +115,7 @@ class PlayerViewController: UIViewController {
             if let films = filmResponse?.results {
                 if url == discoverFilmsURL {
                     self.popularMovies = films
-                    
                     self.highlightPopularMovies = self.popularMovies
-                    if let _ = self.highlightPopularMovies.last {
-                        let lastMovie = self.highlightPopularMovies.removeLast()
-                        self.highlightPopularMovies.insert(lastMovie, at: 0)
-                    }
-                    
                 } else if url == discoverTVURL {
                     self.popularTV = films
                 }
@@ -188,7 +182,6 @@ extension PlayerViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "highlightCell", for: indexPath) as? HighlightTableViewCell
             cell?.delegate = self
             cell?.mediaItems = highlightPopularMovies
-            cell?.backgroundColor = .red
             return cell!
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as? CategoryTableViewCell

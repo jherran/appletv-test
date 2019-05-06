@@ -8,6 +8,21 @@
 
 import UIKit
 
+var motionEffectGroup: UIMotionEffectGroup = {
+    let horizontalAxisMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+    horizontalAxisMotionEffect.minimumRelativeValue = -8.0
+    horizontalAxisMotionEffect.maximumRelativeValue = 8
+    
+    let verticalAxisMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+    verticalAxisMotionEffect.minimumRelativeValue = -8.0
+    verticalAxisMotionEffect.maximumRelativeValue = 8
+    
+    let group = UIMotionEffectGroup()
+    group.motionEffects = [horizontalAxisMotionEffect, verticalAxisMotionEffect]
+    
+    return group
+}()
+
 extension BigImageCollectionViewCell {
     func cellFocused(_ focused: Bool) {
         var scale: CGFloat = 1.0
