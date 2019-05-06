@@ -71,7 +71,7 @@ extension HighlightTableViewCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let delegate = delegate {
-            delegate.highlightSelected(movie: mediaItems[indexPath.row % mediaItems.count])
+            delegate.highlightSelected(movie: mediaItems[indexPath.row])
         }
     }
 }
@@ -83,10 +83,10 @@ extension HighlightTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "bigCollectionViewCellId", for: indexPath) as! BigImageCollectionViewCell
-        if let posterPath = self.mediaItems[indexPath.row % mediaItems.count].posterURL {
+        if let posterPath = self.mediaItems[indexPath.row].posterURL {
             collectionViewCell.image.kf.setImage(with: posterPath)
         }
-        collectionViewCell.cellTitle.text = mediaItems[indexPath.row % mediaItems.count].title ?? mediaItems[indexPath.row % mediaItems.count].name
+        collectionViewCell.cellTitle.text = mediaItems[indexPath.row].title ?? mediaItems[indexPath.row].name
         return collectionViewCell
     }
 }
