@@ -115,7 +115,7 @@ class PlayerViewController: UIViewController {
             if let films = filmResponse?.results {
                 if url == discoverFilmsURL {
                     self.popularMovies = films
-                    self.highlightPopularMovies = self.popularMovies + self.popularMovies
+                    self.highlightPopularMovies = self.popularMovies
                 } else if url == discoverTVURL {
                     self.popularTV = films
                 }

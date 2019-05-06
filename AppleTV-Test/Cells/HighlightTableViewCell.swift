@@ -19,10 +19,6 @@ class HighlightTableViewCell: UITableViewCell {
     var mediaItems: [Media] = [] {
         didSet {
             collectionView.reloadData()
-            if mediaItems.count > 0 {
-                let midIndexPath = IndexPath(row: mediaItems.count / 2, section: 0)
-                collectionView.scrollToItem(at: midIndexPath, at: .centeredHorizontally, animated: false)
-            }
         }
     }
     var delegate: HighlightSelectedDelegate?
@@ -33,9 +29,9 @@ class HighlightTableViewCell: UITableViewCell {
         super.awakeFromNib()
         focusStyle = .custom
 
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 60
+        let layout = LNZInfiniteCollectionViewLayout()
+        layout.itemSize = CGSize(width: 1200, height: 700)
+        layout.interitemSpacing = -30
         
         collectionView.backgroundColor = .clear
         collectionView.collectionViewLayout = layout
@@ -82,7 +78,7 @@ extension HighlightTableViewCell: UICollectionViewDelegate {
 
 extension HighlightTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mediaItems.count * 100
+        return mediaItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -92,11 +88,5 @@ extension HighlightTableViewCell: UICollectionViewDataSource {
         }
         collectionViewCell.cellTitle.text = mediaItems[indexPath.row % mediaItems.count].title ?? mediaItems[indexPath.row % mediaItems.count].name
         return collectionViewCell
-    }
-}
-
-extension HighlightTableViewCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 1200, height: 700)
     }
 }

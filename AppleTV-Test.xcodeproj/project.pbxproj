@@ -22,6 +22,8 @@
 		1828EFA02272F329003EB65D /* HighlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828EF9E2272F329003EB65D /* HighlightTableViewCell.xib */; };
 		1828EFA32272F337003EB65D /* BigImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828EFA12272F336003EB65D /* BigImageCollectionViewCell.xib */; };
 		1828EFA42272F337003EB65D /* BigImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828EFA22272F336003EB65D /* BigImageCollectionViewCell.swift */; };
+		184B53962280440D00D2C288 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B53942280440D00D2C288 /* LNZSnapToCenterCollectionViewLayout.swift */; };
+		184B53972280440D00D2C288 /* LNZInfiniteCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B53952280440D00D2C288 /* LNZInfiniteCollectionViewLayout.swift */; };
 		186A61D4225F4E9B002A781F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D3225F4E9B002A781F /* ImageCollectionViewCell.swift */; };
 		186A61D6225F7DE0002A781F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A61D5225F7DE0002A781F /* ThirdViewController.swift */; };
 		18BD9ABD226606E70078843C /* RowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD9ABC226606E70078843C /* RowTableViewCell.xib */; };
@@ -72,6 +74,8 @@
 		1828EF9E2272F329003EB65D /* HighlightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighlightTableViewCell.xib; sourceTree = "<group>"; };
 		1828EFA12272F336003EB65D /* BigImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BigImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		1828EFA22272F336003EB65D /* BigImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		184B53942280440D00D2C288 /* LNZSnapToCenterCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNZSnapToCenterCollectionViewLayout.swift; sourceTree = "<group>"; };
+		184B53952280440D00D2C288 /* LNZInfiniteCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNZInfiniteCollectionViewLayout.swift; sourceTree = "<group>"; };
 		186A61D3225F4E9B002A781F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		186A61D5225F7DE0002A781F /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		18BD9ABC226606E70078843C /* RowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RowTableViewCell.xib; sourceTree = "<group>"; };
@@ -121,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184B53932280439700D2C288 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				184B53952280440D00D2C288 /* LNZInfiniteCollectionViewLayout.swift */,
+				184B53942280440D00D2C288 /* LNZSnapToCenterCollectionViewLayout.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		18BF62B7225E43DB0009865B = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 				18F48F3D226F1B58005928A3 /* Extensions */,
 				18F48F3C226F1B3E005928A3 /* Model */,
 				18F48F3F226F1B90005928A3 /* ViewControllers */,
+				184B53932280439700D2C288 /* Views */,
 				18F48F3E226F1B76005928A3 /* Cells */,
 				18BF62CC225E43DD0009865B /* Assets.xcassets */,
 				18BF62CE225E43DD0009865B /* Info.plist */,
@@ -422,6 +436,7 @@
 				1828EFA42272F337003EB65D /* BigImageCollectionViewCell.swift in Sources */,
 				18F48F35226EF6E9005928A3 /* DateExtension.swift in Sources */,
 				1828EF982271FDA1003EB65D /* TextCollectionViewCell.swift in Sources */,
+				184B53972280440D00D2C288 /* LNZInfiniteCollectionViewLayout.swift in Sources */,
 				18BF62C4225E43DB0009865B /* AppDelegate.swift in Sources */,
 				1828EF9C2271FEC3003EB65D /* CategoryTableViewCell.swift in Sources */,
 				18046BB52265BE0B00187BB6 /* Media.swift in Sources */,
@@ -433,6 +448,7 @@
 				186A61D4225F4E9B002A781F /* ImageCollectionViewCell.swift in Sources */,
 				18F48F37226EFD36005928A3 /* Configuration.swift in Sources */,
 				18F48F39226F0266005928A3 /* ConfigurationObject.swift in Sources */,
+				184B53962280440D00D2C288 /* LNZSnapToCenterCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
