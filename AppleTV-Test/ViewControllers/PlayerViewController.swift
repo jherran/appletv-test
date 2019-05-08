@@ -136,9 +136,9 @@ extension PlayerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 760
+            return 520
         case 1:
-            return 355
+            return 340
         default:
             return 486
         }

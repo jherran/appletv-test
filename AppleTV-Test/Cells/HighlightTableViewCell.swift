@@ -30,8 +30,8 @@ class HighlightTableViewCell: UITableViewCell {
         focusStyle = .custom
 
         let layout = LNZInfiniteCollectionViewLayout()
-        layout.itemSize = CGSize(width: 1200, height: 700)
-        layout.interitemSpacing = -30
+        layout.itemSize = CGSize(width: 862, height: 485)
+        layout.interitemSpacing = 0
         
         collectionView.backgroundColor = .clear
         collectionView.collectionViewLayout = layout
