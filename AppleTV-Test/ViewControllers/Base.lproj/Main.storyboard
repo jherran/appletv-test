@@ -246,25 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aue-Ba-Bnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="5176"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Qc5-A4-WSk">
-            <objects>
-                <viewController id="d11-Jx-E6l" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fF0-jd-2VM"/>
-                        <viewControllerLayoutGuide type="bottom" id="CLa-nc-bnE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FE2-Td-qft">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="kry-Up-h4Y"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0xi-Sl-LLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2901" y="6536"/>
+            <point key="canvasLocation" x="7797" y="3466"/>
         </scene>
         <!--Login-->
         <scene sceneID="pW5-vF-b9K">
@@ -274,7 +256,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="b4y-no-t7I">
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="b4y-no-t7I">
                                 <rect key="frame" x="90" y="66" width="499" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b4y-no-t7I" id="6Yp-gh-4n3">
@@ -292,23 +274,59 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNo-aY-xhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4498" y="5176"/>
+            <point key="canvasLocation" x="4837" y="6053"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="teS-Bb-OCT">
             <objects>
-                <navigationController id="oL9-lh-hqm" sceneMemberID="viewController">
+                <navigationController id="oL9-lh-hqm" customClass="NavigationController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="adO-fo-KB5">
                         <rect key="frame" x="0.0" y="0.0" width="634" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
                         <segue destination="WFw-4B-A45" kind="relationship" relationship="rootViewController" id="VV0-AN-7xs"/>
+                        <segue destination="WfZ-vl-H9i" kind="showDetail" identifier="recomendar" id="1UL-p9-zJ3"/>
+                        <segue destination="B1d-xf-jin" kind="showDetail" identifier="cuenta" id="Uzo-Af-aaj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oW-yk-ZYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4498" y="3739"/>
+            <point key="canvasLocation" x="4837" y="3739"/>
+        </scene>
+        <!--Recomendar View Controller-->
+        <scene sceneID="z5R-1p-fxF">
+            <objects>
+                <viewController id="WfZ-vl-H9i" customClass="RecomendarViewController" customModule="AppleTV_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gbu-TO-Rfq"/>
+                        <viewControllerLayoutGuide type="bottom" id="uiX-Ao-hKS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2K7-MS-w6l">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkS-EE-oeI">
+                                <rect key="frame" x="40" y="110" width="1145" height="55"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tkS-EE-oeI" firstAttribute="leading" secondItem="fkJ-Wk-Oss" secondAttribute="leading" constant="40" id="37A-MQ-Y4g"/>
+                            <constraint firstItem="tkS-EE-oeI" firstAttribute="top" secondItem="fkJ-Wk-Oss" secondAttribute="top" constant="50" id="MbB-xn-VPu"/>
+                            <constraint firstItem="fkJ-Wk-Oss" firstAttribute="trailing" secondItem="tkS-EE-oeI" secondAttribute="trailing" constant="10" id="WSG-Rt-rYN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fkJ-Wk-Oss"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="tkS-EE-oeI" id="tXk-A0-9xp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUh-Jq-PHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7797" y="5512"/>
         </scene>
         <!--Login-->
         <scene sceneID="lhU-55-Vh2">
@@ -317,7 +335,6 @@
                     <tabBarItem key="tabBarItem" title="Login" id="Uh7-xv-ilV"/>
                     <connections>
                         <segue destination="oL9-lh-hqm" kind="relationship" relationship="masterViewController" id="zbD-Lr-Qpe"/>
-                        <segue destination="B1d-xf-jin" kind="relationship" relationship="detailViewController" id="VSf-xq-xY6"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ah-QO-22t" userLabel="First Responder" sceneMemberID="firstResponder"/>

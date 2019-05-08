@@ -14,6 +14,9 @@ class LoginMenuTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let nav = navigationController, let firstItem = menuItems.first {
+            nav.performSegue(withIdentifier: firstItem.lowercased(), sender: self)
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,6 +33,9 @@ class LoginMenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(menuItems[indexPath.row]) tapped!")
+        if let nav = navigationController {
+            nav.performSegue(withIdentifier: menuItems[indexPath.row].lowercased(), sender: self)
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

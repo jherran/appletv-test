@@ -29,9 +29,9 @@ class CategoryTableViewCell: UITableViewCell {
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 80
+        layout.minimumLineSpacing = 50
         
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = UIColor(red: 29, green: 26, blue: 31, alpha: 0)
         collectionView.collectionViewLayout = layout
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -83,6 +83,6 @@ extension CategoryTableViewCell: UICollectionViewDataSource {
 
 extension CategoryTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 425, height: 302)
+        return CGSize(width: 310, height: 175)
     }
 }
