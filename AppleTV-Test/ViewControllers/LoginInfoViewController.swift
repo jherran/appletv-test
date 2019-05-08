@@ -18,7 +18,7 @@ class LoginInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headerTitle.text = "Cuenta"
+        headerTitle.text = title?.capitalized
         
         tableView.dataSource = self
         tableView.delegate = self
